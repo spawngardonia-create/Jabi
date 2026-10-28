@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jollibee - Bida Ang Saya!</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#" class="logo">Jollibee</a>
+      <nav class="nav">
+        <a href="#menu">Menu</a>
+        <a href="#promos">Promos</a>
+        <a href="#stores">Stores</a>
+        <a href="#rewards">Rewards</a>
+      </nav>
+      <div class="auth-buttons">
+        <button class="btn btn-ghost" id="loginBtn">Log In</button>
+        <button class="btn btn-primary" id="signupBtn">Sign Up</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Bida ang Saya!</h1>
+        <p>Experience the joy of Jollibee. Crispy, juicy, and made with love — the taste that brings families together.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">Order Now</a>
+          <a href="#promos" class="btn btn-outline">View Promos</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-card">
+          <div class="hero-burger">🍔</div>
+          <span>Chickenjoy Bucket</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="section">
+    <div class="container">
+      <h2 class="section-title">Our Menu</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="menu-emoji">🍗</div>
+          <h3>Chickenjoy</h3>
+          <p>Crispylicious, Juicylicious fried chicken.</p>
+          <span class="price">₱169</span>
+        </div>
+        <div class="menu-card">
+          <div class="menu-emoji">🍔</div>
+          <h3>Yumburger</h3>
+          <p>Langhap-sarap beef patty with special dressing.</p>
+          <span class="price">₱59</span>
+        </div>
+        <div class="menu-card">
+          <div class="menu-emoji">🍝</div>
+          <h3>Jolly Spaghetti</h3>
+          <p>Sweet-style spaghetti with hotdog and cheese.</p>
+          <span class="price">₱99</span>
+        </div>
+        <div class="menu-card">
+          <div class="menu-emoji">🍟</div>
+          <h3>Fries</h3>
+          <p>Golden crispy fries, perfectly salted.</p>
+          <span class="price">₱69</span>
+        </div>
+        <div class="menu-card">
+          <div class="menu-emoji">🍦</div>
+          <h3>Jolly Sundae</h3>
+          <p>Creamy soft-serve ice cream.</p>
+          <span class="price">₱49</span>
+        </div>
+        <div class="menu-card">
+          <div class="menu-emoji">🥤</div>
+          <h3>8oz Drink</h3>
+          <p>Choose your favorite beverage.</p>
+          <span class="price">₱49</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="promos" class="section promo-section">
+    <div class="container">
+      <h2 class="section-title">Latest Promos</h2>
+      <div class="promo-banner">
+        <div class="promo-text">
+          <h3>Chickenjoy Bucket for the Family</h3>
+          <p>6-piece Chickenjoy + 3 rice + 3 drinks for only ₱599</p>
+          <a href="#" class="btn btn-primary">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stores" class="section">
+    <div class="container">
+      <h2 class="section-title">Find a Store</h2>
+      <p class="section-sub">Over 1,500 stores nationwide. Find the nearest Jollibee to you.</p>
+      <div class="store-search">
+        <input type="text" placeholder="Enter your city or barangay">
+        <button class="btn btn-primary">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="rewards" class="section rewards-section">
+    <div class="container">
+      <h2 class="section-title">Jollibee Rewards</h2>
+      <p class="section-sub">Earn points every order. Redeem exclusive rewards.</p>
+      <button class="btn btn-primary" id="joinRewardsBtn">Join Now</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Jollibee</strong>
+        <p>Bida ang Saya!</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">About Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <p class="copyright">© 2026 Jollibee Foods Corporation. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Auth Modal -->
+  <div class="modal" id="authModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal">&times;</button>
+      <div class="tabs">
+        <button class="tab active" data-tab="login">Log In</button>
+        <button class="tab" data-tab="signup">Sign Up</button>
+      </div>
+      <form id="loginForm" class="auth-form active">
+        <h3>Welcome Back!</h3>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit" class="btn btn-primary full">Log In</button>
+        <p class="form-note">Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
+      </form>
+      <form id="signupForm" class="auth-form">
+        <h3>Create Account</h3>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <button type="submit" class="btn btn-primary full">Sign Up</button>
+        <p class="form-note">Already have an account? <a href="#" id="switchToLogin">Log in</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
